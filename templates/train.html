@@ -1,0 +1,40 @@
+{% extends 'header.html' %}
+
+{% block head %}
+
+
+<title>Train Status</title>
+{% endblock %}
+
+
+
+
+{% block content %}
+
+
+Go to <a class="btn btn-primary" href="/">Home</a>
+
+{%if context['model_is_training'] is not true %}
+<div class="text-center">
+  <p > Do you want to train your model? </p>
+  <a class=" btn btn-info align-items-center" data-loading-text="Loading..." 
+    href="/train/train_model" method = post>
+    Train</a>
+</div>
+<br>
+<br>
+{% else %}
+<div class="row">
+    <div class="alert alert-primary" role="alert">
+        {{ context['message']}}
+      </div>
+  
+        {{ context['experiment']|safe }}
+
+
+   
+</div>
+{% endif %}
+
+        
+{% endblock %}

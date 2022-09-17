@@ -1,0 +1,13 @@
+columns:
+  class: str
+  text: str
+
+target_column: class
+feature_column: text
+
+
+
+  
+
+
+
