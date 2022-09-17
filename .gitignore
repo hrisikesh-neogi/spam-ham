@@ -52,7 +52,7 @@ coverage.xml
 .pytest_cache/
 
 #vscode files
-.vscode
+/.vscode
 # Translations
 *.mo
 *.pot
